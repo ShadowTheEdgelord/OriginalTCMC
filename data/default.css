@@ -1,5 +1,10 @@
 body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Verdana,
+        Arial,
+        Helvetica,
+        sans-serif,
+        courier,
+        monospace;
     font-size: 14px;
     color: #000000;
     margin: 0px;
@@ -14,13 +19,6 @@ html {
     background-image: url(../img/background.bmp);
     background-repeat: repeat;
     background-attachment: fixed;
-}
-
-table {
-    padding: 0px;
-    margin: 0px;
-    border-spacing: 0px;
-    border-collapse: collapse;
 }
 
 img {
@@ -141,6 +139,42 @@ a:active {
     color: #ffffff;
 }
 
+.comments {
+    width: 600px;
+    text-align: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    background-color: #EEE;
+    color: #000;
+    font-weight: bold;
+    font-family: courier, monospace;
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(173, 173, 173);
+}
+
+.comments>.spoiler-border {
+    border: 1px solid rgb(184, 184, 184);
+}
+
+.comments img {
+    max-width: 60px;
+    padding-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.timestamp {
+    font-weight: normal;
+    font-size: 12px;
+    font-family: courier;
+    color: #8c8c8c;
+}
+
 .spoilerbutton {
     display: inline-block;
     margin: -11px 0px;
@@ -196,6 +230,15 @@ a:active {
 }
 
 .spoilerbutton[value="Hide Video Chat"]+.spoiler>div {
+    padding: 5px;
+    padding-top: 25px;
+}
+
+.spoilerbutton[value="Show Comments"]+.spoiler>div {
+    max-height: 0;
+}
+
+.spoilerbutton[value="Hide Comments"]+.spoiler>div {
     padding: 5px;
     padding-top: 25px;
 }
